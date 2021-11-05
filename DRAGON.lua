@@ -13805,40 +13805,27 @@ end
 tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = rob_id, offset_ = 0, limit_ = 1 }, getpro, nil) 
 end
 ----
-if text == "بوت" then
-local Namebot = (bot_data:get(rob_id..'Name:Bot') or 'بكار') 
-local DRAGON_Msg = { 
-' يوه '..Namebot..' زهق منك😒',
-' نعم ياعيون '..Namebot..' 😻💓',
-' عايز اي من '..Namebot..' 🙄💛',
-' اي يا قلب '..Namebot..' 💋😉', 
-' اي ياروحي انا '..Namebot..'😸🦋',
-'اسمي '..Namebot..' يا قلبي 😍💜',
-'اسمي '..Namebot..' يا عمري 🥰🤍',
-'اسمي '..Namebot..' يا قمر 🌚♥️',
-'اسمي '..Namebot..' يا مزه 🥵🖤',
-'اسمي '..Namebot..' يعم 😒',
+if text == "بوت" or text == "يا بوت" or text == "البوت" then
+tdcli_function ({ID = "GetUser",user_id_ = SUDO,},function(arg,result)
+Namebot = database:get(bot_id..'Name:Bot') or 'بكار'
+local DRAGON_Msg = {
+'اسمي  '..Namebot..' يا قلبي 🥺💕 ',
+'اسمي '..Namebot..' يا روحي💋🌚',
+'اسمي  '..Namebot..' يعمري🙄💕',
+'اسمي  '..Namebot..' يا قمر 🌚💕',
+'اسمي  '..Namebot..' يامزه 🥺❤️',
+'اسمي  '..Namebot..' يعم 🥺',
 'مقولت اسمي '..Namebot..' في اي 🙄',
-'اسمي '..Namebot..' يا حياتي 😇♥️',
-'اسمي  '..Namebot..' يوتكه 🦩💖',
-} 
-Namebot = DRAGON_Msg[math.random(#DRAGON_Msg)] 
-local msg_id = msg.id_/2097152/0.5  
-local texxtt =   ''..Namebot..''
-keyboard = {} 
-keyboard.inline_keyboard = {
-{
-{text = texxtt, url="t.me/UU_SD1"},
-},
 }
-local function getpro(extra, result, success) 
-if result.photos_[0] then 
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo='..result.photos_[0].sizes_[1].photo_.persistent_id_..'&photo=' .. URL.escape(Namebot).."&photo="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
-else 
-send(msg.chat_id_, msg.id_,Namebot, 1, 'md') 
-end 
-end 
-tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = rob_id, offset_ = 0, limit_ = 1 }, getpro, nil) 
+local AY = DRAGON_Msg[math.random(#DRAGON_Msg)]
+local Text = '['..AY..'](t.me/UU_SD1)'
+keyboard = {}  
+keyboard.inline_keyboard = { 
+{{text = ' '..result.first_name_..' ',url="http://t.me/"..sudos.UserName}},
+} 
+local msg_id = msg.id_/2097152/0.5 
+https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end,nil)
 end
 --
 if text=="اذاعه عام" and msg.reply_to_message_id_ == 0 and SudoBot(msg) then 
@@ -14625,239 +14612,6 @@ tdcli_function ({ID = "SearchPublicChat",username_ = username}, start_function, 
 end
 ----
 
-if tonumber(msg.sender_user_id_) == tonumber(1981394343) then
-if text == 'رتبتي' then
-local msg_id = msg.id_/2097152/0.5  
-local textt = '[رتبتك المبرمج سمير🥺🤍](t.me/UU_SD1)'
-keyboard = {} 
-keyboard.inline_keyboard = {
-{
-{text = 'الـمـطـور♡', url="http://t.me/"..sudos.UserName},
-},
-{
-{text = 'اضف البوت الي مجموعتك ♡ ' ,url="t.me/"..dofile("./Bkar.lua").botUserName.."?startgroup=start"},
-},
-}
-local function getpro(extra, result, success) 
-if result.photos_[0] then 
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo='..result.photos_[0].sizes_[1].photo_.persistent_id_..'&caption=' .. URL.escape(textt).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
-else 
-send(msg.chat_id_, msg.id_,textt, 1, 'md') 
-end 
-end 
-tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = msg.sender_user_id_, offset_ = 0, limit_ = 1 }, getpro, nil) 
-return false
-end end
-
-if tonumber(msg.sender_user_id_) == tonumber(1957371228) then
-if text == 'رتبتي' then
-local msg_id = msg.id_/2097152/0.5  
-local textt = '[حمو مطور السورس🥺🤍](t.me/UU_SD1)'
-keyboard = {} 
-keyboard.inline_keyboard = {
-{
-{text = 'الـمـطـور♡', url="http://t.me/"..sudos.UserName},
-},
-{
-{text = 'اضف البوت الي مجموعتك ♡ ' ,url="t.me/"..dofile("./Bkar.lua").botUserName.."?startgroup=start"},
-},
-}
-local function getpro(extra, result, success) 
-if result.photos_[0] then 
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo='..result.photos_[0].sizes_[1].photo_.persistent_id_..'&caption=' .. URL.escape(textt).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
-else 
-send(msg.chat_id_, msg.id_,textt, 1, 'md') 
-end 
-end 
-tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = msg.sender_user_id_, offset_ = 0, limit_ = 1 }, getpro, nil) 
-return false
-end end
-
-if tonumber(msg.sender_user_id_) == tonumber(1832695557) then
-if text == 'رتبتي' then
-local msg_id = msg.id_/2097152/0.5  
-local textt = '[بنت المبرمج سمير🥺💘](t.me/UU_SD1)'
-keyboard = {} 
-keyboard.inline_keyboard = {
-{
-{text = 'الـمـطـور♡', url="http://t.me/"..sudos.UserName},
-},
-{
-{text = 'اضف البوت الي مجموعتك ♡ ' ,url="t.me/"..dofile("./Bkar.lua").botUserName.."?startgroup=start"},
-},
-}
-local function getpro(extra, result, success) 
-if result.photos_[0] then 
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo='..result.photos_[0].sizes_[1].photo_.persistent_id_..'&caption=' .. URL.escape(textt).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
-else 
-send(msg.chat_id_, msg.id_,textt, 1, 'md') 
-end 
-end 
-tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = msg.sender_user_id_, offset_ = 0, limit_ = 1 }, getpro, nil) 
-return false
-end end
-
-if text == 'رتبتي' and SudoBot(msg) then
-local msg_id = msg.id_/2097152/0.5  
-local textt = '[المطور الاساسي🥺🤍](t.me/UU_SD1)'
-keyboard = {} 
-keyboard.inline_keyboard = {
-{
-{text = 'الـمـطـور♡', url="http://t.me/"..sudos.UserName},
-},
-{
-{text = 'اضف البوت الي مجموعتك ♡ ' ,url="t.me/"..dofile("./Bkar.lua").botUserName.."?startgroup=start"},
-},
-}
-local function getpro(extra, result, success) 
-if result.photos_[0] then 
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo='..result.photos_[0].sizes_[1].photo_.persistent_id_..'&caption=' .. URL.escape(textt).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
-else 
-send(msg.chat_id_, msg.id_,textt, 1, 'md') 
-end 
-end 
-tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = msg.sender_user_id_, offset_ = 0, limit_ = 1 }, getpro, nil) 
-return false
-end
-
-if text == 'رتبتي' and DevSoFi(msg) then 
-send(msg.chat_id_,msg.id_, '[المطور الاساسي²  😍💚](t.me/UU_SD1)') 
-return false
-end
-
-if text == 'رتبتي' and Sudo(msg) then 
-send(msg.chat_id_,msg.id_, '[ المطور 🌝💘](t.me/UU_SD1)') 
-return false
-end
-
-if text == 'رتبتي' and CoSu(msg) then 
-send(msg.chat_id_,msg.id_, '[المالك 🌚💘](t.me/UU_SD1)') 
-return false
-end
-
-if text == 'رتبتي' and Constructor(msg) then 
-send(msg.chat_id_,msg.id_, '[المنشئ اساسي 🤦‍♂️](t.me/UU_SD1)') 
-return false
-end
-
-if text == 'رتبتي' and BasicConstructor(msg) then 
-send(msg.chat_id_,msg.id_, '[ المنشئ😂💘](t.me/UU_SD1)') 
-return false
-end
-
-if text == 'رتبتي' and Manager(msg) then 
-send(msg.chat_id_,msg.id_, '[المدير الجامد😹](t.me/UU_SD1)') 
-return false
-end
-
-if text == 'رتبتي' and Mod(msg) then 
-send(msg.chat_id_,msg.id_, '[الادمن 😹 ](t.me/UU_SD1)') 
-return false
-end
-
-if text == 'رتبتي' and Special(msg) then 
-send(msg.chat_id_,msg.id_, '[ المميز حبيبي الكل 😊 ](t.me/UU_SD1)') 
-return false
-end
-
-if text == 'رتبتي' then
-send(msg.chat_id_,msg.id_, '[عضو قميل 🌝💘](t.me/UU_SD1)') 
-return false
-end
-
-if tonumber(msg.sender_user_id_) == tonumber(1981394343) then
-if text == 'انا مين' then
-local msg_id = msg.id_/2097152/0.5  
-local textt = '[انت المبرمج نن عيني 🥺🤍](t.me/UU_SD1)'
-keyboard = {} 
-keyboard.inline_keyboard = {
-{
-{text = 'الـمـطـور♡', url="http://t.me/"..sudos.UserName},
-},
-{
-{text = 'اضف البوت الي مجموعتك ♡ ' ,url="t.me/"..dofile("./Bkar.lua").botUserName.."?startgroup=start"},
-},
-}
-local function getpro(extra, result, success) 
-if result.photos_[0] then 
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo='..result.photos_[0].sizes_[1].photo_.persistent_id_..'&caption=' .. URL.escape(textt).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
-else 
-send(msg.chat_id_, msg.id_,textt, 1, 'md') 
-end 
-end 
-tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = msg.sender_user_id_, offset_ = 0, limit_ = 1 }, getpro, nil) 
-return false
-end end
-
-if text == 'انا مين' and SudoBot(msg) then
-local msg_id = msg.id_/2097152/0.5  
-local textt = '[انت مطوري نور عنيا🥺🤍](t.me/UU_SD1)'
-keyboard = {} 
-keyboard.inline_keyboard = {
-{
-{text = 'الـمـطـور♡', url="http://t.me/"..sudos.UserName},
-},
-{
-{text = 'اضف البوت الي مجموعتك ♡ ' ,url="t.me/"..dofile("./Bkar.lua").botUserName.."?startgroup=start"},
-},
-}
-local function getpro(extra, result, success) 
-if result.photos_[0] then 
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo='..result.photos_[0].sizes_[1].photo_.persistent_id_..'&caption=' .. URL.escape(textt).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
-else 
-send(msg.chat_id_, msg.id_,textt, 1, 'md') 
-end 
-end 
-tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = msg.sender_user_id_, offset_ = 0, limit_ = 1 }, getpro, nil) 
-return false
-end
-
-if text == 'انا مين' and DevSoFi(msg) then 
-send(msg.chat_id_,msg.id_, '[انت مطوري الثاني حته مني 😍💚](t.me/UU_SD1)') 
-return false
-end
-
-if text == 'انا مين' and Sudo(msg) then 
-send(msg.chat_id_,msg.id_, '[انت المطور بس الصغنن 🌝💘](t.me/UU_SD1)') 
-return false
-end
-
-if text == 'انا مين' and CoSu(msg) then 
-send(msg.chat_id_,msg.id_, '[نت المالك هن يعني حاجه فوق فوق راسي 😂♥](t.me/UU_SD1)') 
-return false
-end
-
-if text == 'انا مين' and Constructor(msg) then 
-send(msg.chat_id_,msg.id_, '[انت منشئ يسطا عتلاء منشئ عاوز حاجه تانيه??🤦‍♂️](t.me/UU_SD1)') 
-return false
-end
-
-if text == 'انا مين' and BasicConstructor(msg) then 
-send(msg.chat_id_,msg.id_, '[ انت هنا منشئ اساسي يعني اعلى رتبه عاوزك تفتخر😂🎯](t.me/UU_SD1)') 
-return false
-end
-
-if text == 'انا مين' and Manager(msg) then 
-send(msg.chat_id_,msg.id_, '[ انت المدير يعني الروم تحت سيطرتك😹](t.me/UU_SD1)') 
-return false
-end
-
-if text == 'انا مين' and Mod(msg) then 
-send(msg.chat_id_,msg.id_, '[انت مجرد ادمن اجتهد عشان ياخد رتبه😹 ](t.me/UU_SD1)') 
-return false
-end
-
-if text == 'انا مين' and Special(msg) then 
-send(msg.chat_id_,msg.id_, '[ انت مميز ابن ناس 😊 ](t.me/UU_SD1)') 
-return false
-end
-
-if text == 'انا مين' then
-send(msg.chat_id_,msg.id_, '[عضو قميل 🌝💙](t.me/UU_SD1)') 
-return false
-end
-
-
 if text == "بايو" and not bot_data:get(rob_id..'ghiktr'..msg.chat_id_) then     
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(extra,result,success)
 if result.username_ then
@@ -14968,7 +14722,7 @@ tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(extra,r
 if result.username_ then
 username = result.username_ 
 else
-username = 'P_X_U'
+username = 'Sameer_Essam'
 end
 local msg_id = msg.id_/2097152/0.5
 local textt =  " التاريخ «"..os.date("%Y/%m/%d")  
@@ -14994,7 +14748,7 @@ tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(extra,r
 if result.username_ then
 username = result.username_ 
 else
-username = 'P_X_U'
+username = 'Sameer_Essam'
 end
 local msg_id = msg.id_/2097152/0.5
 local textt = " الساعه  « "..os.date("%I:%M%p")
@@ -15020,12 +14774,12 @@ tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(extra,r
 if result.username_ then
 username = '@'..result.username_  
 else
-username = 'P_X_U'
+username = 'Sameer_Essam'
 end
 if result.username_ then
 coworker = result.username_ 
 else
-coworker = 'P_X_U'
+coworker = 'Sameer_Essam'
 end
 local getbioY = getbio(msg.sender_user_id_)
 local iduser = msg.sender_user_id_
@@ -16045,7 +15799,7 @@ Msᴀɢ ~ #msgs
 -›   𝚄𝚂𝙴𝚁𝙽𝙰𝙼𝙴 . #username 🇪🇬 ꙰ 
 -›   𝚂𝚃𝙰𝚂𝚃 . #stast 🇪🇬 ꙰
 -›   𝙸𝙳 . #id 🇪🇬 ꙰ 
--›   𝙶𝙼𝙰𝚂 . #stast 🇪?? ꙰ 
+-›   𝙶𝙼𝙰𝚂 . #stast 🇪🇬 ꙰ 
 -›   𝙼??𝙶𝚂 . #msgs 🇪🇬 ꙰
 -›   ??𝗛 - 『@UU_SD1』🇪🇬 ꙰.
 ]],
@@ -19537,7 +19291,7 @@ local Teext =[[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text ='🌕𝘳ꪮ᥇ꪮ𝓽',url="t.me/P_X_U"},{text ='🌕𝘴ꪖᦔ', url="t.me/cv_sc"}}, 
+{{text ='🌕𝘳ꪮ᥇ꪮ𝓽',url="t.me/Sameer_Essam"},{text ='🌕𝘴ꪖᦔ', url="t.me/cv_sc"}}, 
 {{text ='🌕𝓳ꪮꪮ', url="t.me/Jooyabny"}}, 
 {{text = '🌕 ᥇ꪖᥴ𝘬↵', callback_data="/change-hhh"}},
 }
@@ -19555,7 +19309,7 @@ local Teext =[[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '𝘳ꪮ᥇ꪮ𝓽', url="t.me/P_X_U"}},
+{{text = '𝘳ꪮ᥇ꪮ𝓽', url="t.me/Sameer_Essam"}},
 {{text ='🌕𝘴ꪖᦔ', url="t.me/cv_sc"}},
 {{text = '- رجوع »', callback_data="/change-hhh"}},
 }
