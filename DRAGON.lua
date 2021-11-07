@@ -12874,8 +12874,8 @@ end
 tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = bot_id, offset_ = 0, limit_ = 1 }, getpro, nil) 
 end
 if text == "بوت" then
-local Namebot = (bot_data:get(ban_id..'Name:Bot') or 'كلير') 
-local KLAER_Msg = { 
+local Namebot = (bot_data:get(ban_id..'Name:Bot') or 'رودينا') 
+local DRAGON_Msg = { 
 'اسمي  '..Namebot..' يا قلبي 🤤💚',
 'اسمي '..Namebot..' يا روحي🙈❤️',
 'اسمي  '..Namebot..' يعمري🌚🌹',
@@ -12887,7 +12887,7 @@ local KLAER_Msg = {
 'اسمي  '..Namebot..' ياحياتي🧸♥️',
 'اسمي  '..Namebot..' يوتكه🙈🍑',
 } 
-Namebot = KLAER_Msg[math.random(#KLAER_Msg)] 
+Namebot = DRAGON_Msg[math.random(#DRAGON_Msg)] 
 local msg_id = msg.id_/2097152/0.5  
 local texxtt =   ''..Namebot..''
 keyboard = {} 
@@ -12896,7 +12896,7 @@ keyboard.inline_keyboard = {
 {text = texxtt, url="http://t.me/"..username},
 },
 {
-{text = 'اضغط لاضافه البوت لمجموعتك☑️ ' ,url="t.me/"..dofile("./Info.lua").botUserName.."?startgroup=start"},
+{text = 'اضغط لاضافه البوت لمجموعتك☑️ ' ,url="t.me/"..dofile("./Bakar.lua").botUserName.."?startgroup=start"},
 },
 }
 local function getpro(extra, result, success) 
