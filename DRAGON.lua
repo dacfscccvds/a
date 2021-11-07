@@ -19937,29 +19937,29 @@ end
 end,nil)
 ------------------------------------------------------------------------
 elseif (data.ID == "UpdateOption" and data.name_ == "my_id") then 
-local list = bot_data:smembers(ban_id.."User_Bot") 
+local list = bot_data:smembers(bot_id.."User_Bot") 
 for k,v in pairs(list) do 
 tdcli_function({ID='GetChat',chat_id_ = v},function(arg,data) end,nil) 
 end         
-local list = bot_data:smembers(ban_id..'Chek:Groups') 
+local list = bot_data:smembers(bot_id..'Chek:Groups') 
 for k,v in pairs(list) do 
 tdcli_function({ID='GetChat',chat_id_ = v
 },function(arg,data)
 if data and data.type_ and data.type_.channel_ and data.type_.channel_.status_ and data.type_.channel_.status_.ID == "ChatMemberStatusMember" then
-bot_data:srem(ban_id..'Chek:Groups',v)  
-tdcli_function ({ID = "ChangeChatMemberStatus",chat_id_=v,user_id_=ban_id,status_={ID = "ChatMemberStatusLeft"},},function(e,g) end, nil) 
+bot_data:srem(bot_id..'Chek:Groups',v)  
+tdcli_function ({ID = "ChangeChatMemberStatus",chat_id_=v,user_id_=bot_id,status_={ID = "ChatMemberStatusLeft"},},function(e,g) end, nil) 
 end
 if data and data.type_ and data.type_.channel_ and data.type_.channel_.status_ and data.type_.channel_.status_.ID == "ChatMemberStatusLeft" then
-bot_data:srem(ban_id..'Chek:Groups',v)  
+bot_data:srem(bot_id..'Chek:Groups',v)  
 end
 if data and data.type_ and data.type_.channel_ and data.type_.channel_.status_ and data.type_.channel_.status_.ID == "ChatMemberStatusKicked" then
-bot_data:srem(ban_id..'Chek:Groups',v)  
+bot_data:srem(bot_id..'Chek:Groups',v)  
 end
 if data and data.code_ and data.code_ == 400 then
-bot_data:srem(ban_id..'Chek:Groups',v)  
+bot_data:srem(bot_id..'Chek:Groups',v)  
 end
 if data and data.type_ and data.type_.channel_ and data.type_.channel_.status_ and data.type_.channel_.status_.ID == "ChatMemberStatusEditor" then
-bot_data:sadd(ban_id..'Chek:Groups',v)  
+bot_data:sadd(bot_id..'Chek:Groups',v)  
 end 
 end,nil)
 end
@@ -19967,18 +19967,18 @@ end
 elseif (data.ID == "UpdateMessageSendSucceeded") then
 local msg = data.message_
 local text = msg.content_.text_
-local Get_Msg_Pin = bot_data:get(ban_id..'Msg:Pin:Chat'..msg.chat_id_)
+local Get_Msg_Pin = bot_data:get(bot_id..'Msg:Pin:Chat'..msg.chat_id_)
 if Get_Msg_Pin ~= nil then
 if text == Get_Msg_Pin then
-tdcli_function ({ID = "PinChannelMessage",channel_id_ = msg.chat_id_:gsub('-100',''),message_id_ = msg.id_,disable_notification_ = 0},function(arg,d) if d.ID == 'Ok' then;bot_data:del(ban_id..'Msg:Pin:Chat'..msg.chat_id_);end;end,nil)   
+tdcli_function ({ID = "PinChannelMessage",channel_id_ = msg.chat_id_:gsub('-100',''),message_id_ = msg.id_,disable_notification_ = 0},function(arg,d) if d.ID == 'Ok' then;bot_data:del(bot_id..'Msg:Pin:Chat'..msg.chat_id_);end;end,nil)   
 elseif (msg.content_.sticker_) then 
 if Get_Msg_Pin == msg.content_.sticker_.sticker_.persistent_id_ then
-tdcli_function ({ID = "PinChannelMessage",channel_id_ = msg.chat_id_:gsub('-100',''),message_id_ = msg.id_,disable_notification_ = 0},function(arg,d) bot_data:del(ban_id..'Msg:Pin:Chat'..msg.chat_id_) end,nil)   
+tdcli_function ({ID = "PinChannelMessage",channel_id_ = msg.chat_id_:gsub('-100',''),message_id_ = msg.id_,disable_notification_ = 0},function(arg,d) bot_data:del(bot_id..'Msg:Pin:Chat'..msg.chat_id_) end,nil)   
 end
 end
 if (msg.content_.animation_) then 
 if msg.content_.animation_.animation_.persistent_id_ == Get_Msg_Pin then
-tdcli_function ({ID = "PinChannelMessage",channel_id_ = msg.chat_id_:gsub('-100',''),message_id_ = msg.id_,disable_notification_ = 0},function(arg,d) bot_data:del(ban_id..'Msg:Pin:Chat'..msg.chat_id_) end,nil)   
+tdcli_function ({ID = "PinChannelMessage",channel_id_ = msg.chat_id_:gsub('-100',''),message_id_ = msg.id_,disable_notification_ = 0},function(arg,d) bot_data:del(bot_id..'Msg:Pin:Chat'..msg.chat_id_) end,nil)   
 end
 end
 if (msg.content_.photo_) then
@@ -19995,7 +19995,7 @@ if msg.content_.photo_.sizes_[3] then
 id_photo = msg.content_.photo_.sizes_[3].photo_.persistent_id_
 end
 if id_photo == Get_Msg_Pin then
-tdcli_function ({ID = "PinChannelMessage",channel_id_ = msg.chat_id_:gsub('-100',''),message_id_ = msg.id_,disable_notification_ = 0},function(arg,d) bot_data:del(ban_id..'Msg:Pin:Chat'..msg.chat_id_) end,nil)   
+tdcli_function ({ID = "PinChannelMessage",channel_id_ = msg.chat_id_:gsub('-100',''),message_id_ = msg.id_,disable_notification_ = 0},function(arg,d) bot_data:del(bot_id..'Msg:Pin:Chat'..msg.chat_id_) end,nil)   
 end
 end
 end
