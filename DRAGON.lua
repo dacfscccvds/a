@@ -12873,27 +12873,40 @@ end
 end 
 tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = bot_id, offset_ = 0, limit_ = 1 }, getpro, nil) 
 end
-if text == "بوت" or text == "يا بوت" or text == "البوت" then
-tdcli_function ({ID = "GetUser",user_id_ = SUDO,},function(arg,result)
-Namebot = database:get(bot_id..'Name:Bot') or 'بكار'
-local DRAGON_Msg = {
-'اسمي  '..Namebot..' يا قلبي 🥺💕 ',
-'اسمي '..Namebot..' يا روحي💋🌚',
-'اسمي  '..Namebot..' يعمري🙄💕',
-'اسمي  '..Namebot..' يا قمر 🌚💕',
-'اسمي  '..Namebot..' يامزه 🥺❤️',
-'اسمي  '..Namebot..' يعم 🥺',
+if text == "بوت" then
+local Namebot = (bot_data:get(ban_id..'Name:Bot') or 'كلير') 
+local KLAER_Msg = { 
+'اسمي  '..Namebot..' يا قلبي 🤤💚',
+'اسمي '..Namebot..' يا روحي🙈❤️',
+'اسمي  '..Namebot..' يعمري🌚🌹',
+'اسمي  '..Namebot..' يا قمر 🐭🤍',
+'اسمي  '..Namebot..' يامزه ??❤️',
+'اسمي  '..Namebot..' يعم 😒',
 'مقولت اسمي '..Namebot..' في اي 🙄',
-}
-local AY = DRAGON_Msg[math.random(#DRAGON_Msg)]
-local Text = '['..AY..'](t.me/UU_SD1)'
-keyboard = {}  
-keyboard.inline_keyboard = { 
-{{text = ' '..result.first_name_..' ',url="http://t.me/"..sudos.UserName}},
+'اسمي الكيوت '..Namebot..' 🌝💘',
+'اسمي  '..Namebot..' ياحياتي🧸♥️',
+'اسمي  '..Namebot..' يوتكه🙈🍑',
 } 
-local msg_id = msg.id_/2097152/0.5 
-https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
-end,nil)
+Namebot = KLAER_Msg[math.random(#KLAER_Msg)] 
+local msg_id = msg.id_/2097152/0.5  
+local texxtt =   ''..Namebot..''
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = texxtt, url="http://t.me/"..username},
+},
+{
+{text = 'اضغط لاضافه البوت لمجموعتك☑️ ' ,url="t.me/"..dofile("./Info.lua").botUserName.."?startgroup=start"},
+},
+}
+local function getpro(extra, result, success) 
+if result.photos_[0] then 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo='..result.photos_[0].sizes_[1].photo_.persistent_id_..'&photo=' .. URL.escape(Namebot).."&photo="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+else 
+send(msg.chat_id_, msg.id_,Namebot, 1, 'md') 
+end 
+end 
+tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = ban_id, offset_ = 0, limit_ = 1 }, getpro, nil) 
 end
 
 if text == "تفعيل الاذاعه" and SudoBot(msg) then 
