@@ -12874,18 +12874,18 @@ end
 tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = bot_id, offset_ = 0, limit_ = 1 }, getpro, nil) 
 end
 if text == "بوت" then
-local Namebot = (bot_data:get(ban_id..'Name:Bot') or 'رودينا') 
+local Namebot = (bot_data:get(bot_id..'Name:Bot') or 'جولد') 
 local DRAGON_Msg = { 
-'اسمي  '..Namebot..' يا قلبي 🤤💚',
-'اسمي '..Namebot..' يا روحي🙈❤️',
-'اسمي  '..Namebot..' يعمري🌚🌹',
-'اسمي  '..Namebot..' يا قمر 🐭🤍',
-'اسمي  '..Namebot..' يامزه ??❤️',
+'اسمي  '..Namebot..' يا قلبي 😍💜',
+'اسمي '..Namebot..' يا روحي 🙈❤️',
+'اسمي  '..Namebot..' يا عمري 🥰🤍',
+'اسمي  '..Namebot..' يا قمر 🌙🥀',
+'اسمي  '..Namebot..' يا مزه 🌝💙',
 'اسمي  '..Namebot..' يعم 😒',
 'مقولت اسمي '..Namebot..' في اي 🙄',
-'اسمي الكيوت '..Namebot..' 🌝💘',
-'اسمي  '..Namebot..' ياحياتي🧸♥️',
-'اسمي  '..Namebot..' يوتكه🙈🍑',
+'اسمي الكيوت '..Namebot..' 🌝💙',
+'اسمي  '..Namebot..' يا حياتي 🌝💙',
+'اسمي  '..Namebot..' يوتكه 🙈💙',
 } 
 Namebot = DRAGON_Msg[math.random(#DRAGON_Msg)] 
 local msg_id = msg.id_/2097152/0.5  
@@ -12893,10 +12893,10 @@ local texxtt =   ''..Namebot..''
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = texxtt, url="http://t.me/"..username},
+{text = texxtt, url="t.me/"..dofile("./Bkar.lua").botUserName},
 },
 {
-{text = 'اضغط لاضافه البوت لمجموعتك☑️ ' ,url="t.me/"..dofile("./Bakar.lua").botUserName.."?startgroup=start"},
+{text = 'اضف البوت لمجموعتك🥇' ,url="t.me/"..dofile("./Info.lua").botUserName.."?startgroup=start"},
 },
 }
 local function getpro(extra, result, success) 
@@ -12906,7 +12906,7 @@ else
 send(msg.chat_id_, msg.id_,Namebot, 1, 'md') 
 end 
 end 
-tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = ban_id, offset_ = 0, limit_ = 1 }, getpro, nil) 
+tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = bot_id, offset_ = 0, limit_ = 1 }, getpro, nil) 
 end
 
 if text == "تفعيل الاذاعه" and SudoBot(msg) then 
@@ -16507,7 +16507,7 @@ keyboard.inline_keyboard = {
 {text = '• الحمل 🐐', callback_data="/zBanda"},
 },
 {
-{text = '• السرطان 🦀', callback_data="/zsltan"},{text = '• العذراء 🦋', callback_data="/zazra"},
+{text = '• السرطان 🦀', callback_data="/zsltan"},{text = '• العذراء ??', callback_data="/zazra"},
 },
 {
 {text = '• الميزان ⚖', callback_data="/zmezan"},{text = '• الجدي 🦌', callback_data="/zgagy"},
