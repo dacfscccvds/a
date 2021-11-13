@@ -4330,16 +4330,16 @@ end
 ----------------------------------------------------------------- انتهئ الاوامر الجديدة
 if text == 'السورس' or text == 'سورس' or text == 'يا سورس' or text == 'source' then
 local Text = [[
-•𝐰𝐞𝐥𝐜𝐨𝐦𝐞 𝐭𝐨 𝐬𝐨𝐮𝐫𝐜𝐞 𝐫𝐨𝐝𝐢𝐧𝐚⇣
+𝐰𝐞𝐥𝐜𝐨𝐦𝐞 𝐭𝐨 𝐬𝐨𝐮𝐫𝐜𝐞 𝐫𝐨𝐝𝐢𝐧𝐚
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '𝑫𝑬𝑽𝑬𝑳𝑶𝑷𝑬𝑹𝑺', callback_data="/units"},{text = '𝑪𝑯', callback_data="/theytry"}},   
-{{text = '˹𝑺𝑶𝑼𝑹𝑪𝑬 𝑹𝑶𝑫𝑰𝑵𝑨˼', url="t.me/p_120o"}},
-{{text ='اضف البوت لمجموعتك♡' ,url="t.me/"..dofile("./Bkar.lua").botUserName.."?startgroup=start"}}, 
+{{text = '˹S A M E E R˼', url="t.me/Sameer_Essam"}}, 
+{{text = '˹𝑪𝑯 ˼', url="t.me/UU_SD1"}},
+{{text = 'اضف البوت الي مجموعتك ♡ ' ,url="t.me/"..dofile("./Bkar.lua").botUserName.."?startgroup=start"}},
 }
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/yousefngm/15&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/fxcvS/9&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 if text=="اذاعه بالتثبيت" and msg.reply_to_message_id_ == 0 and SudoBot(msg) then 
 bot_data:setex(bot_id.."Bc:Grops:Pin" .. msg.chat_id_ .. ":" .. msg.sender_user_id_, 600, true) 
@@ -5411,6 +5411,7 @@ local vlegendv_Msg = {
 send(msg.chat_id_, msg.id_,'['..vlegendv_Msg[math.random(#vlegendv_Msg)]..']')  
 return false 
 end
+
 if text == "سمير" or text == "سمير عصام" or text "المبرمج سمير" then
 local TEXT_SUD = bot_data:get(bot_id..'TEXT_SUDO')
 if TEXT_SUDO then 
@@ -5438,6 +5439,7 @@ tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = 1981394343, offset_ = 
 end,nil)
 end
 end
+
 if text == "ثيم" and not  bot_data:get(bot_id.."sing:for:me"..msg.chat_id_) then 
 ban = math.random(1,57); 
 local Text ='اضغط علي الزر لاختيار ثيم اخر' 
@@ -18764,7 +18766,7 @@ local Teext =[[
 🌝≪━━━━☩𝑹𝑶𝑫𝑰𝑵𝑨☩━━━━≫🌝
 🌝 السورس🌝 موقعي🌝 رتبتي🌝 معلوماتي 
 🌝 رقمي🌝 لقبي🌝 نبذتي🌝 صلاحياتي🌝 غنيلي
-🌝 ميمز🌝 متحركه🌝 صوره🌝 ريمكس🌝 فلم🌝 مسلسل🌝 انمي
+🌝 ميمز🌝 متحركه🌝 صوره?? ريمكس🌝 فلم🌝 مسلسل🌝 انمي
 🌝 رسائلي🌝 حذف رسائلي🌝 اسمي🌝 معرفي 
 🌝 ايدي🌝ايديي🌝 جهاتي🌝 راسلني🌝 الالعاب 
 🌝 نقاطي🌝 بيع نقاطي🌝 القوانين🌝 زخرفه 
