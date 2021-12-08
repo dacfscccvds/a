@@ -1,0 +1,108 @@
+from pyrogram import Client, filters
+from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
+from config import BOT_NAME as bn
+from helpers.filters import other_filters2, command
+from time import time
+from datetime import datetime
+from helpers.decorators import authorized_users_only
+from config import BOT_USERNAME, ASSISTANT_USERNAME
+
+@Client.on_message(command(["help"]) & other_filters2)
+async def help(_, message: Message):
+    await message.reply_text(
+        f"""{bn}• الاوامر 
+
+- /play <اسم الأغنية> 
+ـ تشغيل الأغنية التي طلبتها. 
+
+- /playlist 
+ـ عرض قائمة التشغيل الآن. 
+
+- /song <اسم الاغنيه>
+ـ تنزيل الأغاني التي تريدها بسرعة. 
+
+- /search <اسم الاغنيه> 
+ـ البحث في اليوتيوب مع التفاصيل. 
+
+- /vsong <اسم الاغنيه>
+ـ تنزيل مقاطع الفيديو التي تريدها بسرعة
+
+- /lyric <اسم الاغنيه>
+ـ إحضار كلمات الاغنيه. 
+
+• الاوامر الخاصه بِ المشرفين فقط . 
+ 
+- /player  
+ـ فتح لوحة إعدادات مشغل الموسيقى
+
+- /pause 
+ـ وقف تشغيل الاغنيه الحاليه. 
+
+- /resume
+ـ استئناف تشغيل الأغنية. 
+
+- /skip 
+ـ التقدم للأغنية التالية
+
+- /end 
+ـ إيقاف تشغيل الموسيقى. 
+
+- /musicplayer on 
+ـ لتعطيل مشغل الموسيقى في مجموعتك. 
+
+- /musicplayer off 
+- لتمكين مشغل الموسيقى في مجموعتك. 
+
+- /userbotjoin 
+- دعوة المساعد إلى الدردشه الحاليه 
+
+- /userbotleave 
+- إزالة المساعد من الدردشة الحالية. 
+
+- /reload 
+- تحديث قائمة الإدارة. 
+
+- /uptime 
+- التحقق من وقت تشغيل البوت
+
+- /ping 
+- تحقق من حالة البوت 
+
+• الاوامر الخاصه بالمطورين
+
+- /pmpermit on | off  
+ـ قفل/فتح الدردشه ف الخاص. 
+
+- /userbotleaveall 
+- اطلب من المساعد مغادرة جميع المجموعات
+
+- /gcast 
+- عمل إذاعه
+
+• الشات الخاص بالبوت المساعد 
+
+- .yes 
+- الموافقة على إرسال رسالة إلى المساعد في الخاص. 
+
+- .no 
+- رفض إرسال رسالة إلى المساعد في الخاص.
+</b>""",
+        reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton(
+                        "🚨ⒷⒶⓇ🚨", url=f"https://t.me/XxllllllllllllllllllllllllllxX"
+                    ),
+                    InlineKeyboardButton(
+                        "𝐒𝐎𝐔𝐑𝐂𝐄🌀", url=f"https://t.me/XxvprxX "
+                    )
+                ],
+                [
+                    InlineKeyboardButton(
+                        "ᯓ˹ 𝐕𝘼𝙈𝘽𝙄𝙍𖣥⃟⃟⃟⃟⃟🇵🇸فمـبــيرـ͢", url=f"https://t.me/XxlllllllllllllllllllllllllllxX"
+                    )
+                ]
+            ]
+        ),
+     disable_web_page_preview=True
+    )
