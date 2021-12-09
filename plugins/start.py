@@ -42,21 +42,21 @@ async def start(_, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "➕ انقر لاضافتي لمجموعتك 🙋‍♂",
-                        url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
+                        "𝑭𝑨𝑹𝑨𝑯 𝑴𝑼𝑺𝑰𝑪 🍧 🔊", url="https://t.me/F_A_R1")
                   ],[
                   InlineKeyboardButton(
-                            "المبرمج مسلم ✅", url=f"https://t.me/Sameer_Essam"
+                        "『𝑴𝑺』𝑺𝑨𝑴𝑬𝑬𝑹 𝑬𝑳𝑴𝑼𝑺𝑳𝑰𝑴 📿, url="https://t.me/Sameer_Essam")
                   ],[
                     InlineKeyboardButton(
                        "𝑷𝑳𝑨𝑵𝑬𝑻 𝑺𝑨𝑴𝑬𝑬𝑹🏂💖", url="https://t.me/UU_SD1"
                     ),
                     InlineKeyboardButton(
-                        "جروب الدعم 💬", url=f"https://t.me/p_120a"
+                        "𝑷𝑳𝑨𝑵𝑬𝑻 🏂💖", url="https://t.me/p_120a"
                     )
                 ],[
                     InlineKeyboardButton(
-                        "𝑭𝑨𝑹𝑨𝑯 𝑴𝑼𝑺𝑰𝑪 🍧 🔊", url=f"https://t.me/F_A_R1"
+                        "🎧اضافه البوت اللي مجموعتك🎧",
+                        url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
                     )
                 ]
             ]
@@ -148,15 +148,15 @@ async def help(_, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "جروب الدعم 💬", url=f"https://t.me/p_120a"
+                        "𝑷𝑳𝑨𝑵𝑬𝑻 🏂💖", url=f"https://t.me/p_120a"
                     ),
                     InlineKeyboardButton(
-                        "𝑷𝑳𝑨𝑵𝑬𝑻 𝑺𝑨𝑴𝑬𝑬𝑹🏂💖", url=f"https://t.me/UU_SD1"
+                        "𝑷𝑳𝑨𝑵𝑬𝑻 𝑺𝑨𝑴𝑬𝑬𝑹🏂💖", url=f"https://t.me/UU_SD1 "
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        "المبرمج مسلم ✅", url=f"https://t.me/Sameer_Essam"
+                        "『𝑴𝑺』𝑺𝑨𝑴𝑬𝑬𝑹 𝑬𝑳𝑴𝑼𝑺𝑳𝑰𝑴 📿, url=f"https://t.me/Sameer_Essam"
                     )
                 ]
             ]
