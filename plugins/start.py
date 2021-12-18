@@ -36,22 +36,22 @@ async def start(_, message: Message):
 ⌁ ⁞  بوت تشغيل الاغاني  في المكالمه ' الجماعيه وبحث /song +اسم الاغنيه
 ⌁ ⁞ قم برفع البوت مشرف مع صلاحيه اضافه مستخدمين عبر الرابط
 لمعرفه الأوامر اضغط /help 
-⌁ ⁞   Developed By [『𝑴𝑺』𝑺𝑨𝑴𝑬𝑬𝑹 𝑬𝑳𝑴𝑼𝑺𝑳𝑰𝑴 📿](https://t.me/Sameer_Essam)!**
+⌁ ⁞   Developed By [『𝑴𝑺』𝑺𝑨𝑴𝑬𝑬𝑹 📿](https://t.me/s_000m)!**
 </b>""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "𝑭𝑨𝑹𝑨𝑯 𝑴𝑼𝑺𝑰𝑪 🍧 🔊", url="https://t.me/F_A_R1")
+                        "🔮ⓜⓤⓢⓘⓒ🔮", url="https://t.me/RehaaMusic")
                   ],[
                   InlineKeyboardButton(
-                        "『𝑴𝑺』𝑺𝑨𝑴𝑬𝑬𝑹 𝑬𝑳𝑴𝑼𝑺𝑳𝑰𝑴 📿, url="https://t.me/Sameer_Essam")
+                        "『𝑴𝑺』𝑺𝑨𝑴𝑬𝑬𝑹 📿", url="https://t.me/s_000m")
                   ],[
                     InlineKeyboardButton(
-                       "𝑷𝑳𝑨𝑵𝑬𝑻 𝑺𝑨𝑴𝑬𝑬𝑹🏂💖", url="https://t.me/UU_SD1"
+                       "جروب الدعم 💬", url="https://t.me/R_O_D_I_b"
                     ),
                     InlineKeyboardButton(
-                        "𝑷𝑳𝑨𝑵𝑬𝑻 🏂💖", url="https://t.me/p_120a"
+                        "قــنــاة الــبــوت 🔰✅", url="https://t.me/R_O_D_I_bo"
                     )
                 ],[
                     InlineKeyboardButton(
@@ -148,15 +148,15 @@ async def help(_, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "𝑷𝑳𝑨𝑵𝑬𝑻 🏂💖", url=f"https://t.me/p_120a"
+                        "قــنــاة الــبــوت 🔰✅", url=f"https://t.me/R_O_D_I_bo"
                     ),
                     InlineKeyboardButton(
-                        "𝑷𝑳𝑨𝑵𝑬𝑻 𝑺𝑨𝑴𝑬𝑬𝑹🏂💖", url=f"https://t.me/UU_SD1 "
+                        "جروب الدعم 💬", url=f"https://t.me/R_O_D_I_b"
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        "『𝑴𝑺』𝑺𝑨𝑴𝑬𝑬𝑹 𝑬𝑳𝑴𝑼𝑺𝑳𝑰𝑴 📿, url=f"https://t.me/Sameer_Essam"
+                        "『𝑴𝑺』𝑺𝑨𝑴𝑬𝑬𝑹 📿", url=f"https://t.me/s_000m"
                     )
                 ]
             ]

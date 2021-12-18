@@ -121,7 +121,7 @@ async def m_cb(b, cb):
 
 
 # play
-@Client.on_message(command(["play", f"play@F_A_R_BOT"]) & filters.group & ~filters.edited & ~filters.forwarded & ~filters.via_bot)
+@Client.on_message(command(["play", f"play@R_O_D_0_bot"]) & filters.group & ~filters.edited & ~filters.forwarded & ~filters.via_bot)
 async def play(_, message: Message):
     global que
     global useer
@@ -133,7 +133,7 @@ async def play(_, message: Message):
     try:
         user = await USER.get_me()
     except:
-        user.first_name = "F_A_R1"
+        user.first_name = "R_OD_I_BOT"
     usar = user
     wew = usar.id
     try:
@@ -148,7 +148,7 @@ async def play(_, message: Message):
                     invitelink = await _.export_chat_invite_link(chid)
                 except:
                     await lel.edit(
-                        "<b>اعطني صلاحية دعوة المستخدمين لدعوة الحساب المساعد\nاو قم بي اضافتة يدويا @F_A_R1</b>",
+                        "<b>اعطني صلاحية دعوة المستخدمين لدعوة الحساب المساعد\nاو قم بي اضافتة يدويا @R_OD_I_BOT</b>",
                     )
                     return
 
@@ -166,13 +166,13 @@ async def play(_, message: Message):
                     pass
                 except Exception:
                     await lel.edit(
-                        f"حدث خطأ ما\n{Exception}\n\nيرجي اعادة توجية هذة الرسالة الي المطور @Sameer_Essam\n\nقم بي اضافه الحساب المساعد يدويا @F_A_R1")
+                        f"حدث خطأ ما\n{Exception}\n\nيرجي اعادة توجية هذة الرسالة الي المطور @S_000m\n\nقم بي اضافه الحساب المساعد يدويا @R_OD_I_BOT")
     try:
         await USER.get_chat(chid)
         # lmoa = await client.get_chat_member(chid,wew)
     except:
         await lel.edit(
-            f"<b>هناك مشكلة لم استطيع دعوة الحساب المساعد ارسل الامر ( /userbotjoin ) حتا ينضم او قم بي اضافتة يدويا @F_A_R1</b>"
+            f"<b>هناك مشكلة لم استطيع دعوة الحساب المساعد ارسل الامر ( /userbotjoin ) حتا ينضم او قم بي اضافتة يدويا @R_OD_I_BOT</b>"
         )
         return
 
@@ -191,16 +191,16 @@ async def play(_, message: Message):
 
         file_name = get_file_name(audio)
         title = file_name
-        thumb_name = "https://telegra.ph/file/6719bbcce0d6fe9ee3ad5.jpg"
+        thumb_name = "https://telegra.ph/file/cd0b87484429704c7b935.png"
         thumbnail = thumb_name
         duration = round(audio.duration / 60)
-        views = "@Sameer_Essam"
+        views = "@S_000m"
 
         keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("『𝑴𝑺』𝑺𝑨𝑴𝑬𝑬𝑹 𝑬𝑳𝑴𝑼𝑺𝑳𝑰𝑴 📿", url=f"t.me/Sameer_Essam"),
-                    InlineKeyboardButton("𝑷𝑳𝑨𝑵𝑬𝑻 𝑺𝑨𝑴𝑬𝑬𝑹🏂💖", url=f"t.me/UU_SD1"),
+                    InlineKeyboardButton("『𝑴𝑺』𝑺𝑨𝑴𝑬𝑬𝑹 📿", url=f"t.me/S_000m"),
+                    InlineKeyboardButton("𝑪𝑯 𝑹𝑶𝑫𝑰𝑵𝑨 ♻️", url=f"t.me/R_O_D_1_bo"),
                 ],
                 [InlineKeyboardButton(text="اغلاق القائمة", callback_data="cls")],
             ]
@@ -235,18 +235,18 @@ async def play(_, message: Message):
             keyboard = InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("『𝑴𝑺』𝑺𝑨𝑴𝑬𝑬𝑹 𝑬𝑳𝑴𝑼𝑺𝑳𝑰𝑴 📿", url=f"t.me/Sameer_Essam"),
-                        InlineKeyboardButton("𝑷𝑳𝑨𝑵𝑬𝑻 𝑺𝑨𝑴𝑬𝑬𝑹🏂💖", url=f"t.me/UU_SD1"),
+                        InlineKeyboardButton("『𝑴𝑺』𝑺𝑨𝑴𝑬𝑬𝑹 📿", url=f"t.me/S_000m"),
+                        InlineKeyboardButton("𝑪𝑯 𝑹𝑶𝑫𝑰??𝑨 ♻️", url=f"t.me/R_O_D_1_bo"),
                     ],
                     [InlineKeyboardButton(text="اغلاق القائمة", callback_data="cls")],
                 ]
             )
 
         except Exception as e:
-            title = "@Sameer_Essam"
-            thumb_name = "https://telegra.ph/file/6719bbcce0d6fe9ee3ad5.jpg"
-            duration = "@Sameer_Essam"
-            views = "@Sameer_Essam"
+            title = "@S_000m"
+            thumb_name = "https://telegra.ph/file/cd0b87484429704c7b935.png"
+            duration = "@S_000m"
+            views = "@S_000m"
 
         if (dur / 60) > DURATION_LIMIT:
             await lel.edit(
@@ -291,8 +291,8 @@ async def play(_, message: Message):
         keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("『𝑴𝑺』𝑺𝑨𝑴𝑬𝑬𝑹 𝑬𝑳𝑴𝑼𝑺𝑳𝑰𝑴 📿", url=f"t.me/Sameer_Essam"),
-                    InlineKeyboardButton("𝑷𝑳𝑨𝑵𝑬𝑻 𝑺𝑨𝑴𝑬𝑬𝑹🏂💖", url=f"t.me/UU_SD1"),
+                    InlineKeyboardButton("『𝑴𝑺』𝑺𝑨𝑴𝑬𝑬𝑹 📿", url=f"t.me/S_000m"),
+                    InlineKeyboardButton("𝑪𝑯 𝑹𝑶𝑫𝑰𝑵𝑨 ♻️", url=f"t.me/R_O_D_I_bo"),
                 ],
                 [InlineKeyboardButton(text="اغلاق القائمة", callback_data="cls")],
             ]
